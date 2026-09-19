@@ -1,11 +1,10 @@
-#include <stdio.h>
-#include "mylib.h"
+#ifndef MYLIB_H
+#define MYLIB_H
 
-int main(void){
-	char str[]="This is a test string";
-	int len;
+int cstrlen(char *str);
+char *cstrcpy(char *dest, char *src);
+char *cstrcat(char *dest, char *src);
+char *cstrchr(char *str, int c);
+int cstrcmp(char *s1, char *s2);
 
-	len=cstrlen(str);
-	printf("The length is %d\n",len);
-	return 0;
-}
+#endif
